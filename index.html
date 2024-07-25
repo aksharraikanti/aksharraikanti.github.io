@@ -14,6 +14,9 @@
             html {
                 scroll-behavior: smooth;
             }
+            .blank-line {
+                height: 20px;
+            }
         </style>
     </head>
     <body class="is-preload">
@@ -101,13 +104,10 @@
 											<img src="images/profile.png" alt="Akshar Raikanti">
 										</div>
                                     </header>
-									<p>Hello, my name is Akshar Raikanti and I am currently a Sophomore attending Purdue University. I am currently majoring in Computer Science with a dual major of Artificial Intelligence with the hopes of entering the Software Engineering and the AI space in the future.</p>
+									<p>Hello, my name is Akshar Raikanti and I am currently a Sophomore attending Purdue University with an expected graduation date of May 2026. I am currently majoring in Computer Science with a dual major of Artificial Intelligence with the hopes of entering the Software Engineering and the AI space in the future.</p>
                                     <p>I am a dedicated and curious Computer Science student at Purdue University with a passion for Artificial Intelligence and Machine Learning. I am always eager to learn more and take on new challenges to grow both personally and professionally.</p>
 									<p>My interests include Software Programming, AI/ML, Neural Networks, LLMs, 3D design, Business, Entrepreneurship, and Management.</p>
                                     <p>I have interned at various companies, gaining valuable experience in software engineering, machine learning, and data science. I enjoy working on projects that involve problem-solving and innovative thinking.</p>
-                                    <ul class="actions">
-                                        <li><a href="#experience" class="button next">Where I Have Worked</a></li>
-                                    </ul>
                                 </div>
                             </section>
 
@@ -117,12 +117,12 @@
 									<header class="major">
 										<h2>Professional Experience</h2>
 									</header>
-									<p>Here are some of the companies I have worked at:</p>
+									<p>The following are some of the companies where I have gained experience:</p>
 									<ul>
 										<li>
 											<h3>Data Engineering and Machine Learning Intern, TransSIGHT</h3>
 											June 2024 - August 2024
-                                            <hr>
+                                            <div class="blank-line"></div>
                                             <ul>
 												<li>Developed an end-to-end data pipeline using Apache Airflow, automating data ingestion, transformation, and loading into SQL Server.</li>
 												<li>Managed Docker containers to ensure consistent environments, improving deployment speed.</li>
@@ -133,10 +133,10 @@
 												<li>Relevant Skills: Python, SQL, Scikit-learn, TensorFlow, Pandas, SQLAlchemy, PyODBC, Matplotlib, Seaborn, Docker, Apache Airflow, AWS (S3, MWAA, IAM), Microsoft SQL Server, PyTest, Redshift</li>
 											</ul>
 										</li>
+                                        <hr>
 										<li>
 											<h3>Software Engineering Fellow, Headstarter AI</h3>
 											July 2024 - September 2024
-                                            <hr>
                                             <ul>
 												<li>Participated in an intensive 7-week AI/ML and software engineering fellowship.</li>
 												<li>Built a personal website with HTML, CSS, and DNS.</li>
@@ -149,10 +149,11 @@
 												<li>Relevant Skills: Artificial Intelligence, Machine Learning, Reinforcement Learning, NextJS, ReactJS, AWS, RAG, Firebase, Natural Language Processing (NLP), Web Development, Software Engineering, API Integration, User Interface Design, and Project Management</li>
 											</ul>
 										</li>
+                                        <hr>
 										<li>
 											<h3>Data Science and Machine Learning Intern, BASF</h3>
 											August 2023 - May 2024
-                                            <hr>
+                                            <div class="blank-line"></div>
                                             <ul>
 												<li>Delivered a statistical approach to approximating competitive market share at a more granular level.</li>
 												<li>Leveraged such output to compute benchmarking analytics for quantifying the accessible market opportunity relative to our competitors.</li>
@@ -160,9 +161,6 @@
 											</ul>
 										</li>
 									</ul>
-									<ul class="actions">
-                                        <li><a href="#projects" class="button next">Explore My Work</a></li>
-                                    </ul>
 								</div>
 							</section>
 
@@ -176,25 +174,39 @@
                                     <p>Here are some of the projects I have worked on:</p>
                                     <ul>
                                         <li>
-                                            <h3>Pantry Tracker</h3>
-                                            <p>Created with ReactJS, NextJS, and Firebase for real-time data tracking of pantry items.</p>
+                                            <h3>Pantry Tracker App</h3>
+                                            <!-- <p>July 2024</p> -->
+                                            <ul>
+                                                <li>Created with React and Next.js for real-time data tracking of pantry items.</li>
+                                                <li>Implemented user authentication and authorization using Firebase Authentication to ensure secure access to each user’s data.</li>
+                                            </ul>
                                         </li>
                                         <li>
                                             <h3>AI Customer Support System</h3>
-                                            <p>Developed using OpenAI, NextJS, and AWS to provide automated support to customers. The system integrates with various APIs to enhance functionality.</p>
-                                        </li>
-										<li>
-                                            <h3>AI Flashcard App</h3>
-                                            <p>Designed an app with Stripe API payments and OpenAI content to help users study efficiently.</p>
+                                            <!-- <p>August 2024</p> -->
+                                            <ul>
+                                                <li>Developed using OpenAI, Next.js, and AWS to provide automated customer support. The system integrates with various APIs to enhance functionality.</li>
+                                                <li>Leveraged AWS Lambda to create serverless functions that handle high-volume customer queries with minimal latency.</li>
+                                            </ul>
                                         </li>
                                         <li>
-                                            <h3>AI Rate My Professor</h3>
-											<p>Developed an app using RAG, OpenAI, and Vectors to help students choose classes based on past reviews of professors.</p>
+                                            <h3>AI Flashcard App</h3>
+                                            <!-- <p>August 2024</p> -->
+                                            <ul>
+                                                <li>Designed an app with Stripe API payments and OpenAI content to help users study efficiently.</li>
+                                                <li>Integrated adaptive learning algorithms to customize flashcard difficulty based on user performance and learning speed.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h3>Machine Learning Assisted Rate My Professor App</h3>
+                                            <!-- <p>September 2024</p> -->
+                                            <ul>
+                                                <li>Developed an app using RAG, OpenAI, and Vectors to help students choose classes based on professors' past reviews.</li>
+                                                <li>Utilized sentiment analysis techniques to provide deeper insights into professor reviews, helping students make more informed decisions.</li>
+                                            </ul>
                                         </li>
                                     </ul>
-                                    <ul class="actions">
-                                        <li><a href="#contact" class="button next">Get In Touch</a></li>
-                                    </ul>
+
                                 </div>
                             </section>
 
@@ -206,7 +218,7 @@
                             <header class="major">
                                 <h2>Contact Me</h2>
                             </header>
-                            <form method="post" action="#">
+                            <!-- <form method="post" action="#">
                                 <div class="fields">
                                     <div class="field half">
                                         <label for="name">Name</label>
@@ -225,7 +237,7 @@
                                     <li><input type="submit" value="Send Message" class="primary" /></li>
                                     <li><input type="reset" value="Clear" /></li>
                                 </ul>
-                            </form>
+                            </form> -->
                             <div class="contact-methods">
                                 <div class="contact-method">
                                     <span class="icon solid alt fa-envelope"></span>
@@ -258,7 +270,7 @@
                                 <li><a href="https://www.linkedin.com/in/aksharraikanti/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
                             </ul>
                             <ul class="copyright">
-                                <li>&copy; Akshar Raikanti</li>
+                                <li>&copy; Akshar Raikanti 2024</li>
                             </ul>
                         </div>
                     </footer>
