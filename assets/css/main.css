@@ -3740,9 +3740,9 @@ body.is-preload #banner > .inner {
 		padding-top: 3.25em;
 	}
 
-		#wrapper.is-transitioning {
+		/* #wrapper.is-transitioning {
 			opacity: 1;
-		}
+		} */
 
 		#wrapper > * > .inner {
 			padding: 4em 0 2em 0 ;
