@@ -3741,7 +3741,7 @@ body.is-preload #banner > .inner {
 	}
 
 		#wrapper.is-transitioning {
-			opacity: 0;
+			opacity: 1;
 		}
 
 		#wrapper > * > .inner {
