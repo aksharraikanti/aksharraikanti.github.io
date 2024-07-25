@@ -2809,7 +2809,7 @@ input, select, textarea {
 				opacity: 0;
 			}
 
-			.tiles article.is-transitioning {
+			/* .tiles article.is-transitioning {
 				-moz-transform: scale(0.95);
 				-webkit-transform: scale(0.95);
 				-ms-transform: scale(0.95);
@@ -2819,7 +2819,7 @@ input, select, textarea {
 				-ms-filter: blur(0.5em);
 				filter: blur(0.5em);
 				opacity: 0;
-			}
+			} */
 
 			.tiles article:nth-child(4n - 1), .tiles article:nth-child(4n - 2) {
 				width: 60%;
