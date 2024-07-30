@@ -3973,3 +3973,18 @@ body.is-preload #banner > .inner {
 			margin-right: 10px; /* space between image and text */
 			vertical-align: middle;
 		}		
+
+		.actions.spaced {
+			display: flex;
+			justify-content: center; /* centers the buttons horizontally */
+			gap: 15px; /* adjust the spacing between the buttons as needed */
+		}
+		
+		.actions.spaced li {
+			list-style: none;
+		}
+		
+		.actions.spaced a {
+			text-decoration: none;
+		}
+		
