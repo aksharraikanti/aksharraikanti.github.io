@@ -1,33 +1,18 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { CheckCircle2, Loader2, Mail, MapPin, Phone, XCircle } from 'lucide-react';
 import { site } from '@/content/site';
 import { Section, SectionHeading } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
 import { FadeIn } from '@/components/motion/FadeIn';
-import { submitToFormspree, type SubmitState } from '@/lib/formspree';
+
+const fieldErrorClass = 'mt-1 text-xs text-red-600 dark:text-red-400';
 
 export function Contact() {
-  const [state, setState] = useState<SubmitState>('idle');
-  const [feedback, setFeedback] = useState('');
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    const data = {
-      name: String(formData.get('name') || ''),
-      email: String(formData.get('email') || ''),
-      message: String(formData.get('message') || ''),
-    };
-
-    setState('pending');
-    const result = await submitToFormspree(site.formspreeEndpoint, data);
-    setFeedback(result.message);
-    setState(result.ok ? 'success' : 'error');
-    if (result.ok) form.reset();
-  }
+  const [state, handleSubmit] = useForm(site.formspreeFormId);
+  const formErrors = state.errors?.getFormErrors() ?? [];
+  const hasFormError = !state.submitting && !state.succeeded && formErrors.length > 0;
 
   return (
     <Section id="contact">
@@ -58,6 +43,7 @@ export function Contact() {
                 required
                 className="focus-ring w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-sm outline-none"
               />
+              <ValidationError prefix="Email" field="email" errors={state.errors} className={fieldErrorClass} />
             </div>
             <div>
               <label htmlFor="message" className="mb-1.5 block text-sm font-medium">
@@ -70,29 +56,33 @@ export function Contact() {
                 required
                 className="focus-ring w-full resize-none rounded-lg border border-border bg-surface px-4 py-2.5 text-sm outline-none"
               />
+              <ValidationError prefix="Message" field="message" errors={state.errors} className={fieldErrorClass} />
             </div>
 
-            <Button type="submit" disabled={state === 'pending'} className="w-full sm:w-auto">
-              {state === 'pending' && <Loader2 size={16} className="animate-spin" />}
-              {state === 'pending' ? 'Sending…' : 'Send Message'}
+            <Button type="submit" disabled={state.submitting} className="w-full sm:w-auto">
+              {state.submitting && <Loader2 size={16} className="animate-spin" />}
+              {state.submitting ? 'Sending…' : 'Send Message'}
             </Button>
 
-            {state === 'success' && (
+            {state.succeeded && (
               <div
                 role="status"
                 className="flex items-start gap-2 rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-600 dark:text-green-400"
               >
                 <CheckCircle2 size={18} className="mt-0.5 shrink-0" />
-                <span>{feedback}</span>
+                <span>Thanks for reaching out — I&rsquo;ll get back to you soon.</span>
               </div>
             )}
-            {state === 'error' && (
+            {hasFormError && (
               <div
                 role="alert"
                 className="flex items-start gap-2 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-600 dark:text-red-400"
               >
                 <XCircle size={18} className="mt-0.5 shrink-0" />
-                <span>{feedback}</span>
+                <span>
+                  {formErrors.map((error) => error.message).join(', ')} — please try again or email me
+                  directly.
+                </span>
               </div>
             )}
           </form>

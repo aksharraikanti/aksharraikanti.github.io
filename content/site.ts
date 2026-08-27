@@ -14,5 +14,5 @@ export const site = {
   linkedin: 'https://www.linkedin.com/in/aksharraikanti/',
   resumePath: '/resume.pdf',
   gaId: 'G-K3024FXFH6',
-  formspreeEndpoint: 'https://formspree.io/f/your-form-id',
+  formspreeFormId: 'mrpgzjlz',
 } as const;
