@@ -7,6 +7,7 @@ import { CommandPaletteProvider } from '@/components/command-palette/CommandPale
 import { CommandPalette } from '@/components/command-palette/CommandPalette';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { CursorGlow } from '@/components/effects/CursorGlow';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
         <ThemeProvider>
           <CommandPaletteProvider>
+            <CursorGlow />
             <Header />
             {children}
             <Footer />
