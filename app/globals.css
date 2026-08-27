@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-text-primary: #18181b;
+  --color-text-secondary: #52525b;
+  --color-border: #e4e4e7;
+  --color-accent: #4f46e5;
+  --color-accent-contrast: #ffffff;
+}
+
+.dark {
+  --color-bg: #0a0a0b;
+  --color-surface: #141416;
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #a1a1aa;
+  --color-border: #27272a;
+  --color-accent: #818cf8;
+  --color-accent-contrast: #0a0a0b;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
