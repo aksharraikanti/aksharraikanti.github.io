@@ -1,9 +1,22 @@
-# Personal Website - Akshar Raikanti
+# Personal Website — Akshar Raikanti
 
-Welcome to the repository for my personal website! This site showcases my portfolio, projects, and blog posts, providing an insight into my professional journey and personal interests.
+My personal portfolio site: about, experience, skills, and projects.
 
-## About
+Check it out at https://aksharraikanti.github.io/
 
-This website is built using HTML, CSS, and JavaScript. It serves as a platform to share my work, thoughts, and connect with others. Feel free to explore and learn more about what I do.
+## Stack
 
-Check out my website here: https://aksharraikanti.github.io/
+- [Next.js](https://nextjs.org/) (App Router) + TypeScript, statically exported
+- Tailwind CSS
+- Framer Motion (scroll animations), `next-themes` (dark/light mode), `cmdk` (command palette), `react-three-fiber` (3D hero)
+- Deployed to GitHub Pages via GitHub Actions
+
+## Development
+
+```bash
+npm install
+npm run dev       # http://localhost:3000
+npm run build     # static export to out/
+```
+
+Content (experience, projects, skills, site info) lives in `content/*.ts` — edit those files rather than the components to update what's shown on the site.
