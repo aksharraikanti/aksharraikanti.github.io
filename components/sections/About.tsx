@@ -44,7 +44,7 @@ export function About() {
             </div>
             <div className="flex items-center gap-2 p-2.5 rounded-xl border border-border bg-surface/60">
               <MapPin size={16} className="text-accent" />
-              <span>San Ramon, CA / West Lafayette, IN</span>
+              <span>San Francisco Bay Area, CA / West Lafayette, IN</span>
             </div>
           </div>
         </FadeIn>

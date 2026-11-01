@@ -9,7 +9,6 @@ export function GET() {
     tagline: site.tagline,
     description: site.description,
     email: site.email,
-    phone: site.phone,
     location: site.location,
     github: site.github,
     linkedin: site.linkedin,

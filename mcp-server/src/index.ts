@@ -10,7 +10,6 @@ type Profile = {
   tagline: string;
   description: string;
   email: string;
-  phone: string;
   location: string;
   github: string;
   linkedin: string;

@@ -62,7 +62,6 @@ const personJsonLd = {
   name: site.name,
   url: site.url,
   email: `mailto:${site.email}`,
-  telephone: site.phone,
   jobTitle: experience[0]?.role,
   worksFor: experience[0] ? { '@type': 'Organization', name: experience[0].company } : undefined,
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'Purdue University' },

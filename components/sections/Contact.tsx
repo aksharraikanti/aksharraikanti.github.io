@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { CheckCircle2, Loader2, Mail, MapPin, Phone, XCircle, Copy, Check, Send, Sparkles } from 'lucide-react';
+import { CheckCircle2, Loader2, Mail, MapPin, Github, Linkedin, XCircle, Copy, Check, Send, Sparkles } from 'lucide-react';
 import { site } from '@/content/site';
 import { Section, SectionHeading } from '@/components/ui/Section';
 import { Button } from '@/components/ui/Button';
@@ -66,27 +66,33 @@ export function Contact() {
           <SpotlightCard className="p-6 space-y-4">
             <div className="flex items-center gap-3">
               <span className="p-2.5 rounded-xl bg-accent/10 text-accent border border-accent/20">
-                <Phone size={18} />
-              </span>
-              <div>
-                <p className="text-xs font-mono uppercase text-text-secondary">Phone</p>
-                <a
-                  href={site.phoneHref}
-                  className="text-sm font-semibold text-text-primary hover:text-accent transition-colors"
-                >
-                  {site.phone}
-                </a>
-              </div>
-            </div>
-
-            <div className="pt-3 border-t border-border flex items-center gap-3">
-              <span className="p-2.5 rounded-xl bg-accent/10 text-accent border border-accent/20">
                 <MapPin size={18} />
               </span>
               <div>
                 <p className="text-xs font-mono uppercase text-text-secondary">Location</p>
                 <p className="text-sm font-semibold text-text-primary">{site.location}</p>
               </div>
+            </div>
+
+            <div className="pt-3 border-t border-border flex items-center gap-2">
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-border bg-surface hover:border-accent text-xs font-medium text-text-primary transition-colors"
+              >
+                <Github size={14} />
+                <span>GitHub</span>
+              </a>
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg border border-border bg-surface hover:border-accent text-xs font-medium text-text-primary transition-colors"
+              >
+                <Linkedin size={14} />
+                <span>LinkedIn</span>
+              </a>
             </div>
           </SpotlightCard>
 
