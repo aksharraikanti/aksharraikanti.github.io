@@ -3,19 +3,18 @@
 import { useEffect } from 'react';
 import { motion, useMotionValue, useReducedMotion, useSpring } from 'framer-motion';
 
-const GLOW_SIZE = 640;
+const GLOW_SIZE = 550;
 
 /**
- * Full-page ambient glow that eases toward the pointer (mouse or touch-drag,
- * both delivered via pointermove). Fixed behind all content, pointer-events
- * disabled so it never intercepts clicks/scroll.
+ * Ambient spotlight glow that eases toward the pointer with soft physics.
+ * Fixed behind all content, pointer-events disabled so it never intercepts clicks/scroll.
  */
 export function CursorGlow() {
   const shouldReduceMotion = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 55, damping: 20, mass: 0.7 });
-  const springY = useSpring(y, { stiffness: 55, damping: 20, mass: 0.7 });
+  const springX = useSpring(x, { stiffness: 45, damping: 25, mass: 0.8 });
+  const springY = useSpring(y, { stiffness: 45, damping: 25, mass: 0.8 });
 
   useEffect(() => {
     x.set(window.innerWidth / 2);
@@ -35,7 +34,7 @@ export function CursorGlow() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
       <motion.div
-        className="absolute rounded-full opacity-[0.16] blur-[120px] dark:opacity-[0.24]"
+        className="absolute rounded-full opacity-[0.08] blur-[140px] dark:opacity-[0.14]"
         style={{
           width: GLOW_SIZE,
           height: GLOW_SIZE,

@@ -52,10 +52,24 @@ export function HeroBackground() {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 -z-10 overflow-hidden bg-[radial-gradient(circle_at_50%_20%,var(--color-accent)_0%,transparent_60%)] opacity-20 dark:opacity-30"
+      className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+      aria-hidden="true"
     >
+      {/* Overhead Keynote Radial Light Beam */}
+      <div className="absolute inset-x-0 top-0 h-[650px] keynote-beam" />
+
+      {/* Faint Technical 24px Micro-Grid with Radial Mask */}
+      <div
+        className="absolute inset-0 bg-grid-pattern opacity-60 dark:opacity-40"
+        style={{
+          maskImage: 'radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%)',
+        }}
+      />
+
+      {/* Ambient 3D Metallic Core Scene */}
       {canRender3D && (
-        <div className="absolute inset-0" aria-hidden="true">
+        <div className="absolute right-0 top-1/4 h-[550px] w-full max-w-2xl opacity-40 dark:opacity-60 transition-opacity duration-700">
           <HeroScene active={inView && tabVisible} />
         </div>
       )}

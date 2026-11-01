@@ -28,8 +28,8 @@ export function CommandPalette() {
       open={open}
       onOpenChange={setOpen}
       label="Command palette"
-      overlayClassName="fixed inset-0 z-[60] bg-black/40"
-      contentClassName="fixed left-1/2 top-24 z-[70] w-[min(32rem,90vw)] -translate-x-1/2 overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl"
+      overlayClassName="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
+      contentClassName="fixed left-1/2 top-24 z-[70] w-[min(32rem,90vw)] -translate-x-1/2 overflow-hidden rounded-2xl border border-border bg-surface/95 backdrop-blur-xl shadow-2xl"
     >
       <Command.Input
         placeholder="Jump to a section, project, or action..."
@@ -39,6 +39,7 @@ export function CommandPalette() {
         <Command.Empty className="px-4 py-6 text-sm text-text-secondary">No results found.</Command.Empty>
 
         <Command.Group heading="Navigate" className="px-2 py-1 text-xs font-semibold uppercase tracking-wider text-text-secondary [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-2">
+          <Item icon={<Sparkles size={16} />} onSelect={() => go('/#overview')}>Architectural Focus</Item>
           <Item icon={<User size={16} />} onSelect={() => go('/#about')}>About</Item>
           <Item icon={<Briefcase size={16} />} onSelect={() => go('/#experience')}>Experience</Item>
           <Item icon={<Sparkles size={16} />} onSelect={() => go('/#skills')}>Skills</Item>
