@@ -86,9 +86,9 @@ function Item({
   return (
     <Command.Item
       onSelect={onSelect}
-      className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-text-primary aria-selected:bg-bg"
+      className="flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-text-primary aria-selected:bg-accent/10 aria-selected:text-accent transition-colors"
     >
-      <span className="text-text-secondary">{icon}</span>
+      <span className="text-text-secondary group-aria-selected:text-accent">{icon}</span>
       {children}
     </Command.Item>
   );

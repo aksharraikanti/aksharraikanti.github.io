@@ -50,12 +50,12 @@ export function ExperienceTimeline() {
                       </span>
                     )}
                     {role.company === 'Google' && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 text-xs font-mono font-medium text-blue-500 dark:text-blue-400">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/10 border border-blue-500/20 px-2.5 py-0.5 text-xs font-mono font-medium text-blue-600 dark:text-blue-400">
                         Big Tech
                       </span>
                     )}
                     {role.company === 'Tesla' && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-red-500/10 border border-red-500/20 px-2.5 py-0.5 text-xs font-mono font-medium text-red-500 dark:text-red-400">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-red-500/10 border border-red-500/20 px-2.5 py-0.5 text-xs font-mono font-medium text-red-600 dark:text-red-400">
                         Autonomous Systems
                       </span>
                     )}

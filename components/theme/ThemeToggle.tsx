@@ -4,15 +4,16 @@ import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, Sun } from 'lucide-react';
+import { cn } from '@/lib/cn';
 
-export function ThemeToggle() {
+export function ThemeToggle({ className }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    return <div className="h-11 w-11" aria-hidden="true" />;
+    return <div className="h-8 w-8" aria-hidden="true" />;
   }
 
   const isDark = resolvedTheme === 'dark';
@@ -21,7 +22,10 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="focus-ring flex h-11 w-11 items-center justify-center rounded-full text-text-secondary transition-colors hover:bg-surface hover:text-text-primary"
+      className={cn(
+        'focus-ring flex h-8 w-8 items-center justify-center rounded-full text-text-secondary transition-colors hover:bg-surface hover:text-text-primary',
+        className
+      )}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       <AnimatePresence mode="wait" initial={false}>
@@ -33,7 +37,7 @@ export function ThemeToggle() {
           transition={{ duration: 0.2 }}
           className="flex"
         >
-          {isDark ? <Moon size={20} /> : <Sun size={20} />}
+          {isDark ? <Moon size={15} /> : <Sun size={15} />}
         </motion.span>
       </AnimatePresence>
     </button>
