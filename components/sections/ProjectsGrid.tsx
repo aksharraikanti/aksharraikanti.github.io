@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, Github, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Github, Lock, Sparkles } from 'lucide-react';
 import { projects } from '@/content/projects';
 import { Section, SectionHeading } from '@/components/ui/Section';
 import { Badge } from '@/components/ui/Badge';
@@ -62,7 +62,7 @@ export function ProjectsGrid() {
                     <span>Read Architecture</span>
                     <ArrowUpRight size={14} />
                   </Link>
-                  {project.githubUrl && (
+                  {project.githubUrl ? (
                     <a
                       href={project.githubUrl}
                       target="_blank"
@@ -73,6 +73,11 @@ export function ProjectsGrid() {
                       <Github size={14} />
                       <span>Source</span>
                     </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 text-xxs font-mono text-text-secondary/80">
+                      <Lock size={11} />
+                      <span>Private</span>
+                    </span>
                   )}
                 </div>
               </div>

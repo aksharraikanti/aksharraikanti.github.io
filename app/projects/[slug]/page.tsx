@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Lock } from 'lucide-react';
 import { projects } from '@/content/projects';
 import { site } from '@/content/site';
 import { Container } from '@/components/ui/Container';
@@ -61,11 +61,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             ))}
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            {project.githubUrl && (
+          <div className="mt-10 flex flex-wrap items-center gap-3">
+            {project.githubUrl ? (
               <LinkButton href={project.githubUrl} target="_blank" rel="noreferrer" variant="primary">
                 <Github size={16} /> View on GitHub
               </LinkButton>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface-raised px-3.5 py-1.5 text-xs font-mono text-text-secondary">
+                <Lock size={13} /> Private Repository
+              </span>
             )}
             {project.liveUrl && (
               <LinkButton href={project.liveUrl} target="_blank" rel="noreferrer" variant="secondary">

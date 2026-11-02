@@ -46,6 +46,20 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: 'overlay-board',
+    title: 'Overlay Board (AR Real-Time Whiteboard)',
+    summary: 'Real-time shared paper and whiteboard collaboration using OpenCV homography, tile ink extraction, and peer-to-peer WebRTC.',
+    description: [
+      'Point your phone at a sheet of physical paper or a whiteboard to connect with a collaborator: each person sees the other’s handwriting appear live on their own physical page in real time.',
+      'Engineered a Python and OpenCV computer vision pipeline detecting document corners in real time, executing perspective transformation (homography) to a canonical shared canvas, and isolating ink from paper texture, shadows, and hands while preserving color.',
+      'Implemented an ink delta streaming protocol that partitions the canvas into 64px tiles and broadcasts only updated ink tiles peer-to-peer over WebRTC data channels for low-latency collaboration.',
+      'Applied inverse homography projection to warp incoming partner ink back onto the user’s local camera feed, blending it with natural ink translucency in a cross-platform React Native (Expo) application.',
+    ],
+    stack: ['Python', 'OpenCV', 'Computer Vision', 'WebRTC', 'React Native', 'Expo', 'P2P Networking'],
+    date: '2026-10',
+    featured: true,
+  },
+  {
     slug: 'malloc-implementation',
     title: 'Malloc Dynamic Memory Allocator',
     summary: 'A dynamic memory allocator in C++ implementing custom malloc, free, and calloc with boundary-tag coalescing.',
@@ -57,6 +71,19 @@ export const projects: Project[] = [
     stack: ['C++', 'Systems Programming', 'Memory Management', 'Data Structures'],
     date: '2026-02',
     featured: true,
+  },
+  {
+    slug: 'localllm',
+    title: 'LocalLLM: Fine-Tuning & Quantized Inference Pipeline',
+    summary: 'An end-to-end local LLM pipeline for dataset synthesis, LoRA fine-tuning, 8-bit quantization, and low-latency FastAPI inference serving.',
+    description: [
+      'Architected an end-to-end local LLM fine-tuning and inference platform enabling on-device execution on Apple Silicon and containerized Linux without external API dependencies.',
+      'Constructed automated data preparation and tokenization pipelines for domain-specific Q&A datasets with ROUGE metric evaluation and validation reports.',
+      'Implemented parameter-efficient LoRA fine-tuning workflows and 8-bit model quantization (bitsandbytes/ONNX) to reduce memory footprint while evaluating perplexity baselines against known prompts.',
+      'Shipped a low-latency FastAPI inference microservice with batching, API-key authentication, Docker containerization, and a standalone Python client SDK (localllm-client).',
+    ],
+    stack: ['Python', 'PyTorch', 'Transformers', 'LoRA', '8-bit Quantization', 'FastAPI', 'Docker', 'ONNX'],
+    date: '2025-08',
   },
   {
     slug: 'rag-professor-tracker',

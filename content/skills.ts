@@ -9,24 +9,24 @@ export const skills: SkillGroup[] = [
     items: ['Python', 'Go', 'Java', 'C', 'C++', 'C#/.NET', 'TypeScript', 'JavaScript', 'SQL', 'R'],
   },
   {
-    category: 'AI / ML',
+    category: 'AI / ML & Vision',
     items: [
-      'TensorFlow',
       'PyTorch',
-      'LangChain',
-      'LangGraph',
+      'TensorFlow',
+      'Computer Vision (OpenCV)',
       'Agentic AI',
+      'LLM Evaluation',
+      'LoRA & Model Quantization',
       'RAG',
       'Vector Database Search',
-      'LLM Evaluation',
     ],
   },
   {
     category: 'Systems & Cloud',
-    items: ['Distributed Systems', 'Raft Consensus', 'AWS', 'Google Cloud (GCP)', 'Azure', 'Docker', 'CI/CD', 'OpenShift'],
+    items: ['Distributed Systems', 'Raft Consensus', 'WebRTC', 'AWS', 'Google Cloud (GCP)', 'Azure', 'Docker', 'CI/CD'],
   },
   {
-    category: 'Data & Tools',
-    items: ['PostgreSQL', 'SQLite', 'Google Spanner', 'NoSQL', 'Apache Airflow', 'Git', 'Jira'],
+    category: 'Data & Frameworks',
+    items: ['React Native', 'FastAPI', 'PostgreSQL', 'SQLite', 'Google Spanner', 'Apache Airflow', 'Git', 'Jira'],
   },
 ];
