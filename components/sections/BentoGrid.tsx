@@ -11,7 +11,7 @@ export function BentoGrid() {
       <SectionHeading
         eyebrow="Architectural Focus"
         title="Engineering across the full stack of AI"
-        description="From low-level systems programming in C++ to production multi-agent systems and enterprise cloud pipelines."
+        description="From distributed consensus in Go and low-level C++ to production multi-agent systems and enterprise cloud pipelines."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -74,7 +74,7 @@ export function BentoGrid() {
           </SpotlightCard>
         </FadeIn>
 
-        {/* Bento 3: Low-Level Systems Programming (Malloc) */}
+        {/* Bento 3: Systems Programming & Distributed Consensus */}
         <FadeIn>
           <SpotlightCard className="h-full p-6 sm:p-8 flex flex-col justify-between">
             <div>
@@ -85,24 +85,23 @@ export function BentoGrid() {
                 <span className="text-xs font-mono text-text-secondary">Systems</span>
               </div>
               <h3 className="text-lg font-bold tracking-tight text-text-primary mb-2">
-                Memory Management & C++
+                Distributed Systems & C++
               </h3>
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                Wrote a dynamic memory allocator from scratch in C++ implementing `malloc`, `free`, and
-                `calloc` with explicit free lists, boundary-tag coalescing, and first-fit placement.
+                Engineered a 10-stage distributed systems laboratory in Go implementing Raft consensus and 2PC transactions, plus a custom C++ dynamic memory allocator.
               </p>
             </div>
 
             <div className="pt-4 border-t border-border flex items-center justify-between">
               <div className="flex flex-wrap gap-1.5">
+                <Badge>Go &bull; Raft</Badge>
                 <Badge>C++</Badge>
-                <Badge>Memory Allocator</Badge>
               </div>
               <Link
-                href="/projects/malloc-implementation/"
+                href="/#projects"
                 className="text-xs font-medium text-accent hover:underline flex items-center gap-1"
               >
-                <span>Write-up</span>
+                <span>Projects</span>
                 <ArrowUpRight size={14} />
               </Link>
             </div>

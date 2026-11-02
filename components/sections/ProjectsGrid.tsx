@@ -12,7 +12,7 @@ export function ProjectsGrid() {
       <SectionHeading
         eyebrow="Projects"
         title="Featured Systems & AI Applications"
-        description="A blend of low-level systems programming in C++, production agentic workflows, and full-stack AI SaaS platforms."
+        description="Distributed consensus in Go, multi-agent LLM evaluation harnesses, low-level systems in C++, and production AI platforms."
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (

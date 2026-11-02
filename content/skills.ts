@@ -6,7 +6,7 @@ export type SkillGroup = {
 export const skills: SkillGroup[] = [
   {
     category: 'Languages',
-    items: ['Python', 'Java', 'C', 'C++', 'C#/.NET', 'SQL', 'R', 'JavaScript'],
+    items: ['Python', 'Go', 'Java', 'C', 'C++', 'C#/.NET', 'TypeScript', 'JavaScript', 'SQL', 'R'],
   },
   {
     category: 'AI / ML',
@@ -18,15 +18,15 @@ export const skills: SkillGroup[] = [
       'Agentic AI',
       'RAG',
       'Vector Database Search',
-      'ML Training',
+      'LLM Evaluation',
     ],
   },
   {
-    category: 'Cloud & Infra',
-    items: ['Azure', 'Google Cloud (GCP)', 'AWS', 'Docker', 'CI/CD', 'OpenShift'],
+    category: 'Systems & Cloud',
+    items: ['Distributed Systems', 'Raft Consensus', 'AWS', 'Google Cloud (GCP)', 'Azure', 'Docker', 'CI/CD', 'OpenShift'],
   },
   {
     category: 'Data & Tools',
-    items: ['Relational Databases', 'NoSQL', 'Jira', 'Apache', 'Git'],
+    items: ['PostgreSQL', 'SQLite', 'Google Spanner', 'NoSQL', 'Apache Airflow', 'Git', 'Jira'],
   },
 ];
